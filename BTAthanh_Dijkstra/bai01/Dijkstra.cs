@@ -10,7 +10,7 @@ class Dijkstra
         this.g = g;
     }
 
-    private int timKCMin(int[] dist, bool[] visited)
+    private int timDinhCoDDMin(int[] dist, bool[] visited)
     {
         int min = int.MaxValue;
         int dinh = 0;
@@ -35,7 +35,7 @@ class Dijkstra
 
         for (int i = 0; i < g.n; ++i)
         {
-            int u = timKCMin(dist, visited);
+            int u = timDinhCoDDMin(dist, visited);
             visited[u] = true;
 
             for (int v = 0; v < g.n; ++v)
