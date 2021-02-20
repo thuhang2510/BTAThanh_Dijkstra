@@ -1,0 +1,6 @@
+xét về code của em
+lỡ dùng tiếng Anh thì thuần tiếng Anhh nhé
+"trongSo" trong tiếng Anh là "weight"
+hàm timDinhCoDDMin code sai
+lỡ tất cả đỉnh đều đã viếng thăm thì hàm phải trả về -1
+mới vào em khởi tạo dinh = 0 là sai, lỡ dinh = 0 đã visited thì sao?
