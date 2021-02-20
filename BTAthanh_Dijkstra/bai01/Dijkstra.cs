@@ -10,10 +10,10 @@ class Dijkstra
         this.g = g;
     }
 
-    private int timDinhCoDDMin(int[] dist, bool[] visited)
+    private int timDinhCoDDMin(int[] dist, bool[] visited) //
     {
         int min = int.MaxValue;
-        int dinh = 0;
+        int dinh = -1;
 
         for (int i = 0; i < dist.Length; ++i)
             if (min > dist[i] && visited[i] == false)
@@ -36,6 +36,10 @@ class Dijkstra
         for (int i = 0; i < g.n; ++i)
         {
             int u = timDinhCoDDMin(dist, visited);
+
+            if (u == -1)
+                break;
+
             visited[u] = true;
 
             for (int v = 0; v < g.n; ++v)
@@ -56,7 +60,7 @@ class Dijkstra
         return (dist, pre);
     }
 
-    public (List<int> path, int trongSo) findPath(int startVertex, int endVertex)
+    public (List<int> path, int weight) findPath(int startVertex, int endVertex)
     {
         (int[] dist, int[] pre) = dijkstra(startVertex);
 

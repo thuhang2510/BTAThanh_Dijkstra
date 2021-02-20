@@ -12,12 +12,12 @@ namespace bai01
         {
             FileIO fileIO = new FileIO();
 
-            Input input = fileIO.docFile("input.txt");
+            Input input = fileIO.docFile("input1.txt");
             Dijkstra dijkstra = new Dijkstra(input.g);
 
-            (List<int> ketqua, int trongSo) = dijkstra.findPath(input.uBD, input.uKT);
+            (List<int> ketqua, int weight) = dijkstra.findPath(input.uBD, input.uKT);
 
-            Console.WriteLine("Trong so: " + trongSo);
+            Console.WriteLine("Trong so: " + weight);
 
             if (ketqua != null)
                 Console.WriteLine(string.Join(" --> ", ketqua));
